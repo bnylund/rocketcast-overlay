@@ -1,6 +1,7 @@
 {
   "exclude": ["test.ts", "examples/**/*"],
   "compilerOptions": {
+    "jsx": "preserve",
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */

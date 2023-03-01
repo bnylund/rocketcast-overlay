@@ -15,7 +15,8 @@
   "types": "./index.d.ts",
   "main": "index.js",
   "dependencies": {
-    "socket.io-client": "^4.6.1"
+    "socket.io-client": "^4.6.1",
+    "solid-js": "^1.6.11"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",

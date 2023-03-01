@@ -145,6 +145,9 @@ class RocketcastService extends EventEmitter {
 
 export default RocketcastService
 
+export * from './game-types'
+export * from './providers'
+
 export type SceneDataType =
   | 'String'
   | 'String[]'
