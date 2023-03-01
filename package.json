@@ -1,6 +1,6 @@
 {
   "name": "@rocketcast/overlay",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utilities for overlays used with Rocketcast",
   "author": "Benjamin Nylund <ben@nylund.us>",
   "license": "ISC",
