@@ -1,11 +1,16 @@
 {
   "name": "@rocketcast/overlay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities for overlays used with Rocketcast",
   "author": "Benjamin Nylund <ben@nylund.us>",
   "license": "ISC",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint ./ --ext .js,.ts",
+    "lint:fix": "yarn lint -- --fix",
+    "bump": "yarn version --patch",
+    "bump:minor": "yarn version --minor",
+    "bump:major": "yarn version --major"
   },
   "types": "./index.d.ts",
   "main": "index.js",
