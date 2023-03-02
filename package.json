@@ -1,6 +1,6 @@
 {
   "name": "@rocketcast/overlay",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utilities for overlays used with Rocketcast",
   "author": "Benjamin Nylund <ben@nylund.us>",
   "license": "ISC",
@@ -17,11 +17,13 @@
   "main": "index.js",
   "dependencies": {
     "alpeventemitter": "^2.0.1",
+    "react": "^18.2.0",
     "socket.io-client": "^4.6.1",
     "solid-js": "^1.6.11"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
+    "@types/react": "^18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.35.0",

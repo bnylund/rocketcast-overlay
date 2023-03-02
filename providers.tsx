@@ -4,6 +4,7 @@
  *  - React
  *
  */
+import React from 'react'
 import { createContext as createContextSolid, useContext as useContextSolid } from 'solid-js'
 import { ManagerOptions, SocketOptions } from 'socket.io-client'
 import RocketcastService from '.'
@@ -20,8 +21,15 @@ export const SolidJS = (name: string, server: string, opts?: Partial<ManagerOpti
 
   return {
     SERVICE,
-    Provider: (props: any) => {
-      return <RocketcastContextSolid.Provider value={SERVICE} children={props.children} />
+    Provider: (props: any): JSX.Element => {
+      return (
+        <>
+          {RocketcastContextSolid.Provider({
+            value: SERVICE,
+            ...props,
+          })}
+        </>
+      )
     },
   }
 }

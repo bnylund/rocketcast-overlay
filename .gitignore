@@ -1,4 +1,6 @@
 test.ts
 *.d.ts
 *.js
+*.jsx
 node_modules
+*-error.log
