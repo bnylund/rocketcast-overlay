@@ -9,8 +9,7 @@
 
 import { io, ManagerOptions, Socket, SocketOptions } from 'socket.io-client'
 import { GameEvent } from './game-types'
-
-const EventEmitter = require('alpeventemitter')
+import EventEmitter from 'eventemitter3'
 
 declare interface RocketcastService {
   // Socket listeners
@@ -152,7 +151,6 @@ class RocketcastService extends EventEmitter {
 export default RocketcastService
 
 export * from './game-types'
-export * from './providers'
 
 export type SceneDataType =
   | 'String'

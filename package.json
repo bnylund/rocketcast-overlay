@@ -17,7 +17,7 @@
   "types": "./index.d.ts",
   "main": "index.js",
   "dependencies": {
-    "alpeventemitter": "^2.0.1",
+    "eventemitter3": "^5.0.0",
     "react": "^18.2.0",
     "socket.io-client": "^4.6.1",
     "solid-js": "^1.6.11"

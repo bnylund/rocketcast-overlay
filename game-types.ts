@@ -165,8 +165,7 @@ export type EventDataMap = {
       /**
        * Map of `TeamNumber`s to `TeamName`s and their team's score
        */
-      teams: Record<
-        TeamNumber,
+      teams: [
         {
           /**
            * Team name
@@ -184,8 +183,9 @@ export type EventDataMap = {
            * Team's secondary color (as a hex code)
            */
           color_secondary: string
-        }
-      >
+        },
+      ]
+
       /**
        * Game time
        */
@@ -199,9 +199,8 @@ export type EventDataMap = {
     /**
      * Map of `PlayerID`s to data about the corresponding player
      */
-    players: Record<
-      PlayerID,
-      BasePlayer & {
+    players: {
+      [key: PlayerID]: BasePlayer & {
         /**
          * Number of assists the player has
          */
@@ -287,7 +286,7 @@ export type EventDataMap = {
          */
         touches: number
       }
-    >
+    }
   }
   'game:match_created': OnlyMatchGUID
   'game:initialized': OnlyMatchGUID
@@ -400,15 +399,11 @@ export type EventDataMap = {
       /**
        * Map of `PlayerID`s to data about the corresponding player's nameplate data
        */
-      players: Record<
-        PlayerID,
-        NameplateStatus & {
-          /**
-           * Player nameplate scale
-           */
+      players: {
+        [key: PlayerID]: NameplateStatus & {
           scale: number
         }
-      >
+      }
     }
   }
   'sos:version': string
