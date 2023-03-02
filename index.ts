@@ -110,7 +110,12 @@ class RocketcastService extends EventEmitter {
     // Socket connection listeners
     this.socket.on('connect', () => {
       // Login, then send connected signal
-      this.socket.emit('login', 'OVERLAY', this.name)
+      this.socket.emit('login', 'OVERLAY', this.name, (error?: Error) => {
+        if (error) {
+          console.log(error)
+          this.disconnect()
+        }
+      })
       this.socket.once('logged_in', () => {
         this.socket.loggedIn = true
         this.emit('socket:connected')
