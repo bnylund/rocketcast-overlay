@@ -57,13 +57,9 @@ class RocketcastService extends EventEmitter {
     this.registerListeners()
   }
 
-  emit(event_name: string, ...args: any[]) {
-    this.dispatchEvent(new Event(event_name, ...args))
-  }
-
   disconnect() {
     if (this.socket.connected) {
-      this.dispatchEvent(new Event('socket:disconnected'))
+      this.emit('socket:disconnected')
       this.socket.disconnect()
     }
   }
