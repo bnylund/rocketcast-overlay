@@ -1,5 +1,5 @@
 {
-  "exclude": ["test.ts", "examples/**/*"],
+  "exclude": ["test.ts", "*.d.ts", "*.js", "*.jsx", "examples/**/*"],
   "compilerOptions": {
     "jsx": "preserve",
     /* Visit https://aka.ms/tsconfig to read more about this file */

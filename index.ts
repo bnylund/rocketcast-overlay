@@ -9,7 +9,8 @@
 
 import { io, ManagerOptions, Socket, SocketOptions } from 'socket.io-client'
 import { GameEvent } from './game-types'
-import EventEmitter from 'events'
+
+const EventEmitter = require('alpeventemitter')
 
 declare interface RocketcastService {
   // Socket listeners
@@ -56,9 +57,13 @@ class RocketcastService extends EventEmitter {
     this.registerListeners()
   }
 
+  emit(event_name: string, ...args: any[]) {
+    this.dispatchEvent(new Event(event_name, ...args))
+  }
+
   disconnect() {
     if (this.socket.connected) {
-      this.emit('socket:disconnected')
+      this.dispatchEvent(new Event('socket:disconnected'))
       this.socket.disconnect()
     }
   }

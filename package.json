@@ -1,10 +1,11 @@
 {
   "name": "@rocketcast/overlay",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utilities for overlays used with Rocketcast",
   "author": "Benjamin Nylund <ben@nylund.us>",
   "license": "ISC",
   "scripts": {
+    "clean": "rm *.d.ts *.js *.jsx",
     "build": "tsc",
     "lint": "eslint ./ --ext .js,.ts",
     "lint:fix": "yarn lint -- --fix",
@@ -15,6 +16,7 @@
   "types": "./index.d.ts",
   "main": "index.js",
   "dependencies": {
+    "alpeventemitter": "^2.0.1",
     "socket.io-client": "^4.6.1",
     "solid-js": "^1.6.11"
   },

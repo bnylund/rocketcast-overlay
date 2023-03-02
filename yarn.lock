@@ -186,6 +186,11 @@ ajv@^6.10.0, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+alpeventemitter@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/alpeventemitter/-/alpeventemitter-2.0.1.tgz#90184a600bf13fddf0bf4a212749494a0afae928"
+  integrity sha512-jlHsjNMVfNA64srtQmFF/sY12/K3DQKvE/H9ap3q1S9DbZBbsSau9ZNiANGhp3C56WqBtTTFsuiFDLEk73Q5gA==
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
